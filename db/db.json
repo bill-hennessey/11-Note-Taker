@@ -1,62 +1,7 @@
 [
-    {
-        "title": "note11",
-        "text": "ghjkl;",
-        "id": "b88d"
-    },
-    {
-        "title": "note10",
-        "text": "sajdyfbajod",
-        "id": "73cb"
-    },
-    {
-        "title": "note9",
-        "text": "asdfa",
-        "id": "79b7"
-    },
-    {
-        "title": "note8",
-        "text": "sdadf",
-        "id": "b79d"
-    },
-    {
-        "title": "Note7",
-        "text": "text7",
-        "id": "b52c"
-    },
-    {
-        "title": "note6",
-        "text": "text6",
-        "id": "4b41"
-    },
-    {
-        "title": "note6",
-        "text": "text6",
-        "id": "9f24"
-    },
-    {
-        "title": "note5",
-        "text": "text5",
-        "id": "7d64"
-    },
-    {
-        "title": "note4",
-        "text": "text4",
-        "id": "6e77"
-    },
-    {
-        "title": "note3",
-        "text": "text3",
-        "id": "e8cd"
-    },
-    {
-        "title": "note2",
-        "text": "text2",
-        "id": "2f32"
-    },
-    {
-        "title": "note1",
-        "text": "text1",
-        "id": "0988"
-    }
+  {
+    "title": "note1",
+    "text": "text1",
+    "id": "0988"
+  }
 ]
