@@ -32,19 +32,29 @@ app.post("/api/notes", (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuid(),
+      id: uuid(),
     };
 
-    const noteString = JSON.stringify(newNote);
+    fs.readFile("./db/db.json", "utf8", (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        // Convert string into JSON object
+        const parsedNotes = JSON.parse(data);
 
-    // the objects are inside an array, how do I append the new note object into the array? Preferably added the the top?
-    fs.appendFile(`./db/db.json`, noteString, (err) =>
-      err
-        ? console.error(err)
-        : console.log(
-            `Review for ${newNote.title} has been written to JSON file`
-          )
-    );
+        parsedNotes.unshift(newNote);
+        console.log(parsedNotes);
+        // Write updated notes back to the file
+        fs.writeFile(
+          "./db/db.json",
+          JSON.stringify(parsedNotes, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info("Successfully updated notes")
+        );
+      }
+    });
 
     const response = {
       status: "success",
@@ -52,7 +62,7 @@ app.post("/api/notes", (req, res) => {
     };
 
     console.log(response);
-    res.status(201).json(response);
+    res.status(202).json(response);
   }
 });
 
