@@ -4,8 +4,6 @@
 
 This application takes user input in the form of a note with a title and stores it in a json db file. This file is then used by the front end to populate the interface. This was a very useful exercise to help me understand the relationship between front end and back end, get and post requests as well as the way to use them.
 
-## Table of Contents (Optional)
-
 ## Installation
 
 No installation, simply view my heroku deploy link here:
